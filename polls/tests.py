@@ -97,9 +97,8 @@ class QuestionIndexDetailTests(TestCase):
                                    args=(past_question.id,)))
         self.assertContains(response, past_question.question_text,
                             status_code=200)
-        
-class QuestionMethodTests(TestCase):
 
+class QuestionMethodTests(TestCase):
 	def test_was_published_recently_with_future_question(self):
 		"""
 		was_published_recently() should return False for questions whose
